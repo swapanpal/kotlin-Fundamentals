@@ -1,16 +1,27 @@
 /**
- * Example-2 of kotlin 'when'
+ * Function() example-1 (with & without parameters)
  */
 fun main(){
-    println("Where are you from?")
-    // take userInput
-    val country = readLine()
+    // call the function
+    functionWithoutParameters()
 
-    when(country){
-        "India" -> println("Namaste")
-        "USA" -> println("Hello")
-        "Germany" -> println("Hallo")
-        "Russia" -> println("Privet")
-        else -> println("I don't know that")
+    // call the powFunction with parameters
+    printPow(2, 3)
+
+}
+
+// function without parameters
+fun functionWithoutParameters(){
+    println("First")
+    println("Second")
+    println("Third")
+}
+
+// function with parameters
+fun printPow(base : Int, exponent : Int){
+    var result = 1
+    for (i in 1..exponent){
+        result *= base
     }
+    println("$base to the power of $exponent is: $result")
 }
