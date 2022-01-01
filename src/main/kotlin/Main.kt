@@ -1,27 +1,18 @@
 /**
- * Function() example-1 (with & without parameters)
+ * Function() example-2
+ * (Sum of the values from 1 to 5 is 15
+ * Take number '5' and print result (1 + 2 + 3 + 4 + 5 = 15
  */
 fun main(){
     // call the function
-    functionWithoutParameters()
-
-    // call the powFunction with parameters
-    printPow(2, 3)
+    sumUpToN(10)
 
 }
-
-// function without parameters
-fun functionWithoutParameters(){
-    println("First")
-    println("Second")
-    println("Third")
-}
-
 // function with parameters
-fun printPow(base : Int, exponent : Int){
-    var result = 1
-    for (i in 1..exponent){
-        result *= base
+fun sumUpToN(n : Int){
+    var result = 0
+    for (i in 1..n){
+        result += i
     }
-    println("$base to the power of $exponent is: $result")
+    println("The Sum of the values from 1 to $n is: $result")
 }
